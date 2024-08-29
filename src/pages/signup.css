@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    width: 100%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.signup_container {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    box-shadow: 0 0 4px rgb(46, 47, 49);
+    padding: 20px;
+    margin: auto;
+}
+
+.login_icons {
+    display: flex;
+    margin: auto;
+    font-size: 50px;
+    color: rgb(243, 110, 132);
+    margin-bottom: 5px;
+
+}
+
+.signup_container h2 {
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.formStyle {
+    padding: 10px;
+}
+
+.user_input {
+    margin-left: 20px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 35px;
+    width: 250px;
+    padding: 15px 10px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.email_input {
+    margin-left: 47px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 35px;
+    width: 250px;
+    padding: 15px 10px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.password_input {
+    margin-left: 26px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 35px;
+    width: 250px;
+    padding: 15px 10px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.dob_input {
+    margin-left: 45px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 35px;
+    width: 250px;
+    padding: 15px 10px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.mobile_input {
+    margin-left: 14px;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    font-size: x-large;
+    font-weight: lighter;
+    height: 35px;
+    width: 250px;
+    padding: 15px 10px;
+    box-shadow: 0px 1px 2px black;
+}
+
+.image_input {
+    margin-left: 52px;
+    width: 250px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    box-shadow: 0px 1px 2px black;
+}
+
+.button {
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    border: none;
+    padding: 5px;
+    font-size: x-large;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0px 1px 2px rgb(71, 63, 63);
+}
