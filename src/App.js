@@ -9,6 +9,9 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Layout from "./Layout";
+import Dashboard from './pages/Dashboard';
+// import Product from './pages/Product';
+import Cart from './pages/Cart';
 
 const router = createBrowserRouter([
 
@@ -21,12 +24,20 @@ const router = createBrowserRouter([
         element: <Login />
       },
       {
+        path: "/dashboard",
+        element: <Dashboard />
+      },
+      {
         path: "/signup",
         element: <Signup />
       },
       {
         path: "/about",
         element: <About />
+      },
+      {
+        path: "/cart",
+        element: <Cart />
       },
       {
         path: "/",

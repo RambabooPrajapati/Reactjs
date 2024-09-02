@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Product from "./Product"; // Import the Product component
 import Pages from './Pages';
-import Cart from './Cart'
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -41,17 +40,16 @@ const Home = () => {
     <>
       <div style={{ margin: "auto", paddingTop: "10px", }}>
         <div style={{ display: 'flex', margin: "auto", flexWrap: 'wrap', gap: '20px' }}>
-          {filteredData.map(product => (
-            <Product key={product.id} product={product} />
+          
+            <Product filteredData={filteredData} />
 
-          ))}
         </div>
         <Pages totalPages={totalPages} setCurrentPage={setCurrentPage} />
       </div>
       <hr></hr>
-      <div style={{ marginTop: "10px"}}>
+      {/* <div style={{ marginTop: "10px"}}>
         <Cart />
-      </div>
+      </div> */}
 
     </>
   );

@@ -6,6 +6,7 @@
 
 .main ul{
     display: flex;
+    flex-direction: row;
     justify-content: right;
     gap: 50px;
     background-color: blue;
@@ -23,4 +24,14 @@
 .link {
     text-decoration: none;
     color: black;
+}
+.deshboard {
+    display: flex;
+    position:absolute;
+    left: 0px;
+    list-style: none;
+    background-color: aliceblue;
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 10px;
 }

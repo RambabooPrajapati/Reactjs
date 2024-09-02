@@ -3,7 +3,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { removeAllAddCarts, removeItem } from '../redux/cartSlice';
 
 const Cart = () => {
-  const productData = useSelector((state) => state.cart.userData);
+  const data = useSelector((state) => state.cart.userData);
+  // console.log("--data-----", data)
+  const productData = data.flat();
+  // console.log("productData----", productData.flat())
+  // console.log("productDataof cart----", productData)
   const dispatch = useDispatch();
   // console.log(productData.map(data => (data.title)))
   const handleRemoveAllAddedCartData = () => {
