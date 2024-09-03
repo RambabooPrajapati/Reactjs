@@ -7,10 +7,10 @@ const Navbar = () => {
     <div className='main' >
       <ul>
         <span className='deshboard'>
-          <Link className='link' to="/dashboard">Dashboard</Link>
+          <Link className='link' to="/">Dashboard</Link>
         </span>
         <li>
-          <Link className='link' to="/">Home</Link>
+          <Link className='link' to="/home">Home</Link>
         </li>
         <li>
           <Link className='link' to="/login">Login</Link>
@@ -18,9 +18,9 @@ const Navbar = () => {
         <li>
           <Link className='link' to="/about">About</Link>
         </li>
-        <li>
+        {/* <li>
           <Link className='link' to="/signup">Signup</Link>
-        </li>
+        </li> */}
         <li>
           <Link className='link' to="/cart">Cart</Link>
         </li>

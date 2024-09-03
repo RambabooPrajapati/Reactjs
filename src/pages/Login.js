@@ -8,7 +8,7 @@ const formatDateToDDMMYYYY = (dateString) => {
     return `${day}/${month}/${year}`;
 };
 
-const Signup = () => {
+const Login = () => {
     const [formData, setFormData] = useState({
         username: "",
         email: "",
@@ -34,50 +34,50 @@ const Signup = () => {
         }
     };
 
-    // Maximum file size in bytes (2 MB)
-    const MAX_FILE_SIZE = 2 * 1024 * 1024;
-    // Allowed file types
-    const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/gif'];
+    // // Maximum file size in bytes (2 MB)
+    // const MAX_FILE_SIZE = 2 * 1024 * 1024;
+    // // Allowed file types
+    // const ALLOWED_TYPES = ['image/jpeg', 'image/png', 'image/gif'];
 
     // Handle change for file input
-    const handleFileChange = (event) => {
-        const file = event.target.files[0];
+    // const handleFileChange = (event) => {
+    //     const file = event.target.files[0];
 
-        if (file) {
-            if (!ALLOWED_TYPES.includes(file.type)) {
-                setErrors((prevErrors) => ({
-                    ...prevErrors,
-                    image: 'Invalid file type. Only JPEG, PNG, and GIF are allowed.'
-                }));
-                setFormData((prevData) => ({
-                    ...prevData,
-                    image: null
-                }));
-                return;
-            }
+    //     if (file) {
+    //         if (!ALLOWED_TYPES.includes(file.type)) {
+    //             setErrors((prevErrors) => ({
+    //                 ...prevErrors,
+    //                 image: 'Invalid file type. Only JPEG, PNG, and GIF are allowed.'
+    //             }));
+    //             setFormData((prevData) => ({
+    //                 ...prevData,
+    //                 image: null
+    //             }));
+    //             return;
+    //         }
 
-            if (file.size > MAX_FILE_SIZE) {
-                setErrors((prevErrors) => ({
-                    ...prevErrors,
-                    image: 'File size exceeds 2 MB limit.'
-                }));
-                setFormData((prevData) => ({
-                    ...prevData,
-                    image: null
-                }));
-                return;
-            }
+    //         if (file.size > MAX_FILE_SIZE) {
+    //             setErrors((prevErrors) => ({
+    //                 ...prevErrors,
+    //                 image: 'File size exceeds 2 MB limit.'
+    //             }));
+    //             setFormData((prevData) => ({
+    //                 ...prevData,
+    //                 image: null
+    //             }));
+    //             return;
+    //         }
 
-            setErrors((prevErrors) => ({
-                ...prevErrors,
-                image: ''
-            }));
-            setFormData((prevData) => ({
-                ...prevData,
-                image: file
-            }));
-        }
-    };
+    //         setErrors((prevErrors) => ({
+    //             ...prevErrors,
+    //             image: ''
+    //         }));
+    //         setFormData((prevData) => ({
+    //             ...prevData,
+    //             image: file
+    //         }));
+    //     }
+    // };
 
     const validate = () => {
         const newErrors = {};
@@ -154,7 +154,10 @@ const Signup = () => {
                                 name='email'
                                 onChange={onChangeHandler}
                             />
-                            {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
+                            <p style={{ marginLeft: '100px', marginBottom: "10px" }}>
+                                {errors.email && <span style={{ color: 'red' }}>{errors.email}</span>}
+
+                            </p>
                         </div>
                         <div className='password'>
                             <label htmlFor='password'>Password </label>
@@ -167,15 +170,17 @@ const Signup = () => {
                                 name='password'
                                 onChange={onChangeHandler}
                             />
-                            {errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}
+                            <p style={{ marginLeft: '100px', marginBottom: "10px" }}>
+                                {errors.password && <span style={{ color: 'red' }}>{errors.password}</span>}
+                            </p>
                         </div>
                         <button className='button' type='submit'>Login</button>
                     </form>
-                    <span>Have an account?<span> <Link style={{ color: "blue", marginLeft: '5px', textDecoration: 'none' }} to='/signup'>Sign up</Link></span></span>
+                    <span>Don't have an account?<span> <Link style={{ color: "blue", marginLeft: '5px', textDecoration: 'none' }} to='/signup'>Sign up</Link></span></span>
                 </div>
             </div>
         </>
     );
 };
 
-export default Signup;
+export default Login;
