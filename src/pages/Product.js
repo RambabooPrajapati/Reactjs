@@ -1,7 +1,7 @@
 // src/Product.js
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart } from '../redux/cartSlice';
+import { addToCart, countAddToCart } from '../redux/cartSlice';
 
 const Product = ({ filteredData }) => {
   const dispatch = useDispatch();
@@ -19,6 +19,7 @@ const Product = ({ filteredData }) => {
       ...prevMessages,
       [product.id]: 'Product added to cart!'
     }));
+    dispatch(countAddToCart())
     // Optionally, clear the message after some time
     setTimeout(() => {
       setMessages(prevMessages => ({

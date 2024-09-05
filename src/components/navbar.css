@@ -10,7 +10,7 @@
     justify-content: right;
     gap: 50px;
     background-color: blue;
-    padding: 10px;
+    padding: 20px;
 }
 .main ul li{
     margin-right: 40px;
@@ -32,6 +32,8 @@
     list-style: none;
     background-color: aliceblue;
     padding: 8px;
-    font-size: 18px;
+    font-size: 25px;
     border-radius: 10px;
+    margin-left: 15px;
+    text-transform:capitalize;
 }
