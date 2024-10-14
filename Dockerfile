@@ -2,10 +2,10 @@
 FROM node:latest
 
 # Set the working directory in the container
-WORKDIR /src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json (if available)
-COPY package*.json ./
+COPY package.json ./
 
 # Install dependencies
 RUN npm install
@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Define the command to run the app
-CMD ["node", "index.js"]
+CMD ["npm", "start"]
